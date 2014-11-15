@@ -8,5 +8,6 @@
   <name>utils</name>
   <modules>
     <module>zip-utils</module>
+    <module>mvn-utils</module>
   </modules>
 </project>
