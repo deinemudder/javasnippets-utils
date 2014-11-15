@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19782" started-at="2014-11-15T21:33:46Z" finished-at="2014-11-15T21:34:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19782" started-at="2014-11-15T21:33:46Z" finished-at="2014-11-15T21:34:06Z">
+      <class name="org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest">
+        <test-method status="PASS" signature="testGetManifestEntries()[pri:0, instance:org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest@e0a659]" name="testGetManifestEntries" duration-ms="31" started-at="2014-11-15T22:33:46Z" finished-at="2014-11-15T22:33:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetManifestEntries -->
+        <test-method status="PASS" signature="testListMavenArtefactInfos()[pri:0, instance:org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest@e0a659]" name="testListMavenArtefactInfos" duration-ms="19703" started-at="2014-11-15T22:33:46Z" finished-at="2014-11-15T22:34:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListMavenArtefactInfos -->
+      </class> <!-- org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
