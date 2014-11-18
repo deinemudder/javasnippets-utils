@@ -18,6 +18,7 @@
 	<modules>
 		<module>zip-utils</module>
 		<module>mvn-utils</module>
+		<module>svn-utils</module>
 	</modules>
 
 	<dependencies>
