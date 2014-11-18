@@ -1,9 +1,3 @@
-/*
- * $Id: SVNUtils ckroeger $
- *
- * Copyright 2014   FINCON Unternehmensberatung. All rights reserved.
- * FINCON Unternehmensberatung PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
 package org.javasnippets.utils.svn;
 
 import java.io.File;
