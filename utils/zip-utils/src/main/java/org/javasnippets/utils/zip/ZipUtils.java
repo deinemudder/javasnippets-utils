@@ -9,6 +9,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.jar.Attributes;
+import java.util.jar.JarFile;
+import java.util.jar.Manifest;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -29,8 +32,8 @@ public class ZipUtils {
 		zipFileListEntries(destFile, fileList, node, null);
 	}
 
-	private static void zipFileListEntries(String zipFile, List<String> fileList, File node,
-			String rootFolder) {
+	private static void zipFileListEntries(String zipFile,
+			List<String> fileList, File node, String rootFolder) {
 		byte[] buffer = new byte[1024];
 		FileOutputStream fos = null;
 		ZipOutputStream zos = null;
@@ -96,5 +99,26 @@ public class ZipUtils {
 	private static String generateZipEntry(File node, File rootNode) {
 		String file = node.toString();
 		return file.substring(rootNode.toString().length() + 1, file.length());
+	}
+
+	public static String[] readJarManifestEntries(String[] manifestKeys, File jarFile)
+			throws IOException {
+		if (manifestKeys == null) {
+			return null;
+		}
+		JarFile jar = null;
+		String[] ret = new String[manifestKeys.length];
+		try {
+			jar = new JarFile(jarFile);
+			Manifest manifest = jar.getManifest();
+			Attributes attributes = manifest.getMainAttributes();
+			for (int i = 0; i < ret.length; i++) {
+				ret[i] = attributes.getValue(manifestKeys[i]);
+			}
+		} finally {
+			if (jar != null)
+				jar.close();
+		}
+		return ret;
 	}
 }

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20" started-at="2014-11-17T12:40:17Z" finished-at="2014-11-17T12:40:17Z">
+  <suite name="Default suite" duration-ms="40" started-at="2014-11-20T11:17:36Z" finished-at="2014-11-20T11:17:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20" started-at="2014-11-17T12:40:17Z" finished-at="2014-11-17T12:40:17Z">
+    <test name="Default test" duration-ms="40" started-at="2014-11-20T11:17:36Z" finished-at="2014-11-20T11:17:36Z">
       <class name="org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest">
-        <test-method status="PASS" signature="testGetManifestEntries()[pri:0, instance:org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest@11bbf1ca]" name="testGetManifestEntries" duration-ms="10" started-at="2014-11-17T13:40:17Z" finished-at="2014-11-17T13:40:17Z">
+        <test-method status="PASS" signature="testGetManifestEntries()[pri:0, instance:org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest@49ff0dde]" name="testGetManifestEntries" duration-ms="18" started-at="2014-11-20T12:17:36Z" finished-at="2014-11-20T12:17:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetManifestEntries -->
-        <test-method status="PASS" signature="testListMavenArtefactInfos()[pri:0, instance:org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest@11bbf1ca]" name="testListMavenArtefactInfos" duration-ms="0" started-at="2014-11-17T13:40:17Z" finished-at="2014-11-17T13:40:17Z">
+        <test-method status="PASS" signature="testListMavenArtefactInfos()[pri:0, instance:org.javasnippets.utils.mvn.ArtefactMetadataUtilsTest@49ff0dde]" name="testListMavenArtefactInfos" duration-ms="6" started-at="2014-11-20T12:17:36Z" finished-at="2014-11-20T12:17:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListMavenArtefactInfos -->
