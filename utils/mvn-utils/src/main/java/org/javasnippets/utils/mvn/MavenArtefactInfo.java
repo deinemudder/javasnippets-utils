@@ -41,7 +41,7 @@ public class MavenArtefactInfo {
 		this.buildVersion = manifestAttributes.getValue(BUILD + "Version");
 
 		String value = manifestAttributes.getValue("svn-revision");
-		if (value != null) {
+		if (value != null && !"".equals(value)) {
 			this.svnRevision = Integer.parseInt(value);
 		}
 	}
