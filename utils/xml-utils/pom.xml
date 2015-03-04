@@ -6,7 +6,7 @@
 	<parent>
 		<artifactId>utils</artifactId>
 		<groupId>org.javasnippets.utils</groupId>
-		<version>1.0.0</version>
+		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>xml-utils</artifactId>
 	<name>xml-utils</name>
