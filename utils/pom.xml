@@ -6,7 +6,7 @@
 
 	<groupId>org.javasnippets.utils</groupId>
 	<artifactId>utils</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>utils</name>
 	<url>https://github.com/deinemudder/javasnippets-utils</url>
@@ -19,6 +19,7 @@
 		<module>zip-utils</module>
 		<module>mvn-utils</module>
 		<module>svn-utils</module>
+		<module>xml-utils</module>
 	</modules>
 
 	<dependencies>
@@ -55,6 +56,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
+
 </project>

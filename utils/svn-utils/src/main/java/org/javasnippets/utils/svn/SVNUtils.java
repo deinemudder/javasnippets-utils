@@ -1,16 +1,24 @@
 package org.javasnippets.utils.svn;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import org.tmatesoft.svn.core.SVNException;
+import org.tmatesoft.svn.core.SVNLogEntry;
 import org.tmatesoft.svn.core.SVNURL;
 import org.tmatesoft.svn.core.wc.SVNRevision;
+import org.tmatesoft.svn.core.wc2.ISvnObjectReceiver;
 import org.tmatesoft.svn.core.wc2.SvnCheckout;
+import org.tmatesoft.svn.core.wc2.SvnLog;
 import org.tmatesoft.svn.core.wc2.SvnOperationFactory;
+import org.tmatesoft.svn.core.wc2.SvnRevisionRange;
 import org.tmatesoft.svn.core.wc2.SvnTarget;
 
 /**
  * SVNUtility-Class for SVN-Operations
+ * 
  * @author ckroeger
  */
 public class SVNUtils {
@@ -143,5 +151,44 @@ public class SVNUtils {
 			}
 		}
 		return (path.delete());
+	}
+
+	/**
+	 * TBD.
+	 * 
+	 * @param url
+	 *            svn-repository-url
+	 * @param date1
+	 * @param date2
+	 * @return LogEntries between given Dates
+	 * 
+	 * @throws SVNException
+	 *             SVNException occurs on SVN-communication-failures
+	 */
+	public static List<SVNLogEntry> svnLog(SVNURL url, Date date1, Date date2)
+			throws SVNException {
+		final SvnOperationFactory svnOperationFactory = new SvnOperationFactory();
+		final List<SVNLogEntry> logEntries = new ArrayList<SVNLogEntry>();
+		try {
+			final SvnLog log = svnOperationFactory.createLog();
+			log.addRange(SvnRevisionRange.create(SVNRevision.create(date1),
+					SVNRevision.create(date2)));
+			log.setDiscoverChangedPaths(true);
+			log.setSingleTarget(SvnTarget.fromURL(url));
+			log.setReceiver(new ISvnObjectReceiver<SVNLogEntry>() {
+				public void receive(SvnTarget target, SVNLogEntry logEntry)
+						throws SVNException {
+//					if (target != null) {
+//						System.out.println("Target: " + target.toString());
+//					}
+//					System.out.println("LogEntry: " + logEntry.toString());
+					logEntries.add(logEntry);
+				}
+			});
+			log.run();
+		} finally {
+			svnOperationFactory.dispose();
+		}
+		return logEntries;
 	}
 }

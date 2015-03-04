@@ -6,18 +6,25 @@
 	<parent>
 		<artifactId>utils</artifactId>
 		<groupId>org.javasnippets.utils</groupId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 	<artifactId>svn-utils</artifactId>
 	<name>svn-utils</name>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>org.tmatesoft.svnkit</groupId>
 			<artifactId>svnkit</artifactId>
 			<version>1.8.5</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 </project>
